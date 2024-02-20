@@ -10,6 +10,7 @@
 #include "funtiongameover.h"
 #include "funtionstart.h"
 #include "funtionwhenitstart.h"
+#include "draw.h"
 using namespace std;
 
 bool gameOver; //ตัวแปรนี้ไว้ใช้ปรับให้มันเป็น true กะ false ก็คือเกมจะเซ็ตไว้เป็นflaseก่อนแล้วถ้าเกิดเจออะไรที่ทำให้มันตายก็แค่เปลี่ยนตัวแปรนี้เป็นtrue เกมก็จะข้ามwhile loop ของระบบเกมทั้งหมดไป
