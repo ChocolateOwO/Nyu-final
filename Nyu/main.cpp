@@ -1,15 +1,18 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Menu.h"
+#include "SnakeGame.h"
 using namespace std;
 
 int main()
-{
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "My window");
-    Menu menu(window.getSize().x, window.getSize().y); //Resize window
+{   
+    SnakeGame game;
+
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Snakegame");
+    Menu menu(window.getSize().x, window.getSize().y); //Resize realtime window
 
     sf::Texture texture;
-    if (!texture.loadFromFile("00000.JPG")) {
+    if (!texture.loadFromFile("55555.JPG")) {
         //Prevent error!
     }
     sf::Sprite background;
@@ -37,9 +40,12 @@ int main()
                     {
                     case 0:
                         cout << "Play has pressed" << '\n';
-                        break;
+                        window.close();
+                        game.run();
+                        
                     case 1:
                         cout << "Exit has pressed" << '\n';
+                        window.close();
                         break;
                     }
                     break;
@@ -62,3 +68,4 @@ int main()
 
     return 0;
 }
+
