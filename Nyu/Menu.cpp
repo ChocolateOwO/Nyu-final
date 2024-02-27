@@ -9,22 +9,26 @@ Menu::Menu(float width, float height) {
 	}
 	menu[0].setFont(font);
 	menu[0].setCharacterSize(72);
-	menu[0].setFillColor(sf::Color::Red);
+	menu[0].setFillColor(sf::Color::White);
 	menu[0].setString("Play");
+	menu[0].setOutlineColor(sf::Color::Red);
+	menu[0].setOutlineThickness(-2);
 	menu[0].setOrigin(menu[0].getLocalBounds().width / 2, menu[0].getLocalBounds().height / 2);
-	menu[0].setPosition(sf::Vector2f(width / 2, height / (MAX_ITEM+1)*1));
+	menu[0].setPosition(sf::Vector2f(width / 3, height / (MAX_ITEM + 1) * 0.5));
 
 	menu[1].setFont(font);
 	menu[1].setFillColor(sf::Color::White);
 	menu[1].setString("Exit");
+	menu[1].setOutlineColor(sf::Color::Red);
+	menu[1].setOutlineThickness(-2);
 	menu[1].setOrigin(menu[0].getLocalBounds().width / 2, menu[0].getLocalBounds().height / 2);
-	menu[1].setPosition(sf::Vector2f(width / 2, height / (MAX_ITEM+1)*2));
+	menu[1].setPosition(sf::Vector2f(width / 3, height / (MAX_ITEM + 1) * 1.5));
 }
 Menu::~Menu() {
 
 }
 
-void Menu::draw(sf::RenderWindow& window)  {
+void Menu::draw(sf::RenderWindow& window) {
 
 	for (int i = 0; i < MAX_ITEM; i++) {
 		window.draw(menu[i]);
