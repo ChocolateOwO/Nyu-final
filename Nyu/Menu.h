@@ -6,7 +6,6 @@ class Menu
 {
 public:
 	Menu(float width,float height);
-	~Menu();
 
 	void draw(sf::RenderWindow& window);
 	void MoveUp();
