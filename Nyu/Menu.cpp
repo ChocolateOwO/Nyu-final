@@ -8,24 +8,21 @@ Menu::Menu(float width, float height) {
 		//prevent error!!
 	}
 	menu[0].setFont(font);
-	menu[0].setCharacterSize(72);
+	menu[0].setCharacterSize(50);
 	menu[0].setFillColor(sf::Color::White);
 	menu[0].setString("Play");
-	menu[0].setOutlineColor(sf::Color::Red);
+	menu[0].setOutlineColor(sf::Color::Black);
 	menu[0].setOutlineThickness(-2);
 	menu[0].setOrigin(menu[0].getLocalBounds().width / 2, menu[0].getLocalBounds().height / 2);
-	menu[0].setPosition(sf::Vector2f(width / 3, height / (MAX_ITEM + 1) * 0.5));
+	menu[0].setPosition(sf::Vector2f(400,295));
 
 	menu[1].setFont(font);
 	menu[1].setFillColor(sf::Color::White);
 	menu[1].setString("Exit");
-	menu[1].setOutlineColor(sf::Color::Red);
+	menu[1].setOutlineColor(sf::Color::Black);
 	menu[1].setOutlineThickness(-2);
 	menu[1].setOrigin(menu[0].getLocalBounds().width / 2, menu[0].getLocalBounds().height / 2);
-	menu[1].setPosition(sf::Vector2f(width / 3, height / (MAX_ITEM + 1) * 1.5));
-}
-Menu::~Menu() {
-
+	menu[1].setPosition(sf::Vector2f(740,545));
 }
 
 void Menu::draw(sf::RenderWindow& window) {
@@ -39,7 +36,7 @@ void Menu::MoveUp() {
 	if (selectMenu - 1 >= 0) {
 		menu[selectMenu].setFillColor(sf::Color::White);
 		selectMenu--;
-		menu[selectMenu].setFillColor(sf::Color::Red);
+		menu[selectMenu].setFillColor(sf::Color::Green);
 
 	}
 }
